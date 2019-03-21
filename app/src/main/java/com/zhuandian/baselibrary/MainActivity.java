@@ -1,13 +1,15 @@
 package com.zhuandian.baselibrary;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.zhuandian.base.WebPageActivity;
+
+public class MainActivity extends WebPageActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public String getUrl() {
+        return "http://www.baidu.com";
     }
+
+
 }

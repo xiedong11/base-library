@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    >
 
-   <WebView
-       android:id="@+id/wv"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"></WebView>
-
+    <WebView
+        android:id="@+id/wv_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>
