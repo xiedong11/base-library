@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.zhuandian.eventhub.BindEventBus;
+
+import org.greenrobot.eventbus.EventBus;
+
 import butterknife.ButterKnife;
 
 /**
@@ -30,12 +34,23 @@ abstract public class BaseFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutId(), container, false);
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         initView();
+        if (this.getClass().isAnnotationPresent(BindEventBus.class)) {
+            EventBus.getDefault().register(this);
+        }
         return view;
     }
 
     protected abstract int getLayoutId();
 
     protected abstract void initView();
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (this.getClass().isAnnotationPresent(BindEventBus.class)) {
+            EventBus.getDefault().unregister(this);
+        }
+    }
 }
