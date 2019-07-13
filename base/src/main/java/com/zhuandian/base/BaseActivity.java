@@ -1,7 +1,7 @@
 package com.zhuandian.base;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.zhuandian.eventhub.BaseEvent;
 import com.zhuandian.eventhub.BindEventBus;
