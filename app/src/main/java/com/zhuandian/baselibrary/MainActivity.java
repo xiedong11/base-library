@@ -1,15 +1,27 @@
 package com.zhuandian.baselibrary;
 
 
-import com.zhuandian.base.WebPageActivity;
+import android.os.Bundle;
 
-public class MainActivity extends WebPageActivity {
+import com.zhuandian.base.BaseActivity;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class MainActivity extends BaseActivity {
 
     @Override
-    public String getUrl() {
-        return "http://www.uisdc.com/comprehensive-material-design-note";
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void setUpView() {
     }
 
 
+
+    @OnClick(R.id.btn_vlayout)
+    public void onClick() {
+    }
 }
