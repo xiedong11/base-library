@@ -29,4 +29,8 @@ implementation 'com.github.xiedong11:base-library:1.1'
 - 图片加载管理的 `glide 3.7.0`
 - 消息总线 `eventbus 3.0.0`
 
+##### com.github.xiedong11:base-library:1.5
+- 引入retrofit快速配置工具类
+
+
 
